@@ -72,4 +72,8 @@ public class Server {
 		return null;
 	}
 
+	public boolean debug() {
+		return configuration.getBoolean("debug", false);
+	}
+
 }

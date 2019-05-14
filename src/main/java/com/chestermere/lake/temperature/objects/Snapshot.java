@@ -5,7 +5,7 @@ import java.time.Instant;
 public class Snapshot {
 
 	private final Instant instant;
-	
+
 	public Snapshot(Instant instant) {
 		this.instant = instant;
 	}

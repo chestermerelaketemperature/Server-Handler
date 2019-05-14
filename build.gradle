@@ -40,6 +40,9 @@ dependencies {
 	// Spring
 	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE')
 
+	// Reflections
+	implementation (group: 'org.reflections', name: 'reflections', version: '0.9.11')
+
 	// Google Guava
 	implementation (group: 'com.google.guava', name: 'guava', version: '27.1-jre')
 
@@ -48,6 +51,9 @@ dependencies {
 
 	// Google Flogger
 	implementation (group: 'com.google.flogger', name: 'flogger', version: '0.4')
+
+	// Joda-Time
+	implementation (group: 'joda-time', name: 'joda-time', version: '2.10.2')
 
 	// H2 Database
 	implementation (group: 'com.h2database', name: 'h2', version: '1.4.199')
