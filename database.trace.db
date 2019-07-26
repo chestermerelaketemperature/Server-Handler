@@ -1,3 +1,6 @@
 2019-07-25 21:52:58 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS DAY-[*]SNAPSHOTS (`ID` CHAR(36) PRIMARY KEY, `DATA` TEXT); "; SQL statement:
 CREATE TABLE IF NOT EXISTS day-snapshots (`id` CHAR(36) PRIMARY KEY, `data` TEXT); [42000-199]
+2019-07-25 22:27:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS DAY-[*]SNAPSHOTS (`ID` CHAR(36) PRIMARY KEY, `DATA` TEXT); "; SQL statement:
+CREATE TABLE IF NOT EXISTS day-snapshots (`id` CHAR(36) PRIMARY KEY, `data` TEXT); [42000-199]

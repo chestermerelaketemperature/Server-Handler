@@ -10,7 +10,7 @@ import com.chestermere.lake.temperature.objects.Snapshot;
 @RestController
 public class LatestController {
 
-	@RequestMapping(method = RequestMethod.GET, path = "/latest")
+	@RequestMapping(method = RequestMethod.GET, path = "/api/latest")
 	public Snapshot getLatest() {
 		return Application.getServer().getSnapshots().getLatest();
 	}
