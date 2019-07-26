@@ -19,7 +19,7 @@ public class SnapshotHandler extends Handler {
 
 	@Override
 	protected Object handlePacket(Packet packet, InetAddress address) {
-		return null; //TODO handle incoming snapshots from the Relay. Handle it all in SnapshotManager.class
+		return null;
 	}
 
 }
