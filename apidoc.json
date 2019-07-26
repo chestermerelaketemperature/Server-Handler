@@ -3,5 +3,5 @@
   "version": "0.0.1",
   "description": "The main documentation for Chestermere Lake Temperature's API",
   "title": "Chestermere Lake Temperature Docs",
-  "url" : "https://api.chestermerelaketemperature.com"
+  "url" : "http://api.chestermerelaketemperature.com"
 }
