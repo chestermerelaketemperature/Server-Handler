@@ -30,6 +30,7 @@ public class SnapshotManager {
 		long id = counter.getAndIncrement();
 		Snapshot snapshot = new Snapshot(Instant.now(), manual, water, air, id);
 		database.put(id + "", snapshot);
+		database.put("last", snapshot);
 		last = snapshot;
 	}
 
