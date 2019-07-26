@@ -46,7 +46,6 @@ public class Server {
 		this.socketListener = new SocketListener(this);
 		this.handlerManager = new HandlerManager(this);
 		this.snapshots = new SnapshotManager(this);
-		snapshots.addSnapshot(true, 67.6, 20.5);
 	}
 
 	public HandlerManager getHandlerManager() {
