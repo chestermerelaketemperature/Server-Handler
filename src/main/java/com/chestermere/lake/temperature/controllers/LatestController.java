@@ -33,6 +33,16 @@ public class LatestController {
 	 *       "airTemperature": 21.1
 	 *     }
 	 *
+	 * @apiExample {js} Example usage:
+	 * 		$(document).ready(function() {
+	 * 			$.ajax({
+	 * 				url: "http://api.chestermerelaketemperature.com/latest"
+	 * 			}).then(function(data) {
+	 * 				$('.snapshot-creation').append(data.creation);
+	 * 				$('.snapshot-air').append(data.airTemperature);
+	 * 				$('.snapshot-water').append(data.waterTemperature);
+	 * 			});
+	 * 		});
 	 */
 	@RequestMapping(method = RequestMethod.GET, path = "/latest")
 	public Snapshot getLatest() {
