@@ -72,7 +72,7 @@ dependencies {
 	compile 'org.apache.commons:commons-jexl:2.1.1'
 
 	// Spring tests
-	testCompile (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE')
+	testCompile (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.6.RELEASE')
 
 }
 
