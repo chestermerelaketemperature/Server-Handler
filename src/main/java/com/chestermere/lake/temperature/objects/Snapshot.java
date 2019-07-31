@@ -2,6 +2,8 @@ package com.chestermere.lake.temperature.objects;
 
 import java.time.Instant;
 
+import org.joda.time.DateTime;
+
 /**
  * Remember new additions require serialization adjustments.
  */
@@ -24,13 +26,16 @@ public class Snapshot {
 		this(Instant.now(), manual, water, air, id);
 	}
 
-
 	public double getWaterTemperature() {
 		return water;
 	}
 
 	public double getAirTemperature() {
 		return air;
+	}
+
+	public DateTime getDateTime() {
+		return new DateTime(instant);
 	}
 
 	/**
