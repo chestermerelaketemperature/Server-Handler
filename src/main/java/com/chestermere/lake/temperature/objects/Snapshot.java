@@ -4,12 +4,17 @@ import java.time.Instant;
 
 import org.joda.time.DateTime;
 
+import com.chestermere.lake.temperature.controllers.InstantJackson;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 /**
  * Remember new additions require serialization adjustments.
  */
 public class Snapshot {
 
 	private final double water, air;
+	@JsonSerialize(using = InstantJackson.class)
 	private final Instant instant;
 	private final boolean manual;
 	private final long id;
@@ -34,6 +39,7 @@ public class Snapshot {
 		return air;
 	}
 
+	@JsonIgnore
 	public DateTime getDateTime() {
 		return new DateTime(instant);
 	}
@@ -41,6 +47,7 @@ public class Snapshot {
 	/**
 	 * @return The instantaneous point in time that this Snapshot was created.
 	 */
+	@JsonIgnore
 	public Instant getCreation() {
 		return instant;
 	}

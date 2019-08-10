@@ -2,8 +2,12 @@ package com.chestermere.lake.temperature.database;
 
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
+import java.time.Instant;
 import java.util.Set;
 
+import com.chestermere.lake.temperature.database.serializers.InstantSerializer;
+import com.chestermere.lake.temperature.database.serializers.SnapshotSerializer;
+import com.chestermere.lake.temperature.objects.Snapshot;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,8 +17,9 @@ public abstract class Database<T> {
 
 	public Database() {
 		gson = new GsonBuilder()
-				//.registerTypeAdapter(Date.class, new DateSerializer()) //TODO finish this
 				.excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC)
+				.registerTypeAdapter(Snapshot.class, new SnapshotSerializer())
+				.registerTypeAdapter(Instant.class, new InstantSerializer())
 				.enableComplexMapKeySerialization()
 				.serializeNulls().create();
 	}
