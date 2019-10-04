@@ -63,7 +63,7 @@ dependencies {
 	testImplementation (group: 'junit', name: 'junit', version: '4.12')
 
 	// Configurations and Apache is annoying.
-	compile 'org.apache.commons:commons-configuration2:2.5'
+	compile 'org.apache.commons:commons-configuration2:2.6'
 	compile 'org.apache.commons:commons-lang3:3.9'
 	compile 'commons-logging:commons-logging:1.2'
 	compile 'commons-beanutils:commons-beanutils:1.9.4'
