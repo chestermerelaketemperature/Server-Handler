@@ -54,7 +54,7 @@ dependencies {
 	shade (group: 'com.google.flogger', name: 'flogger', version: '0.4')
 
 	// Joda-Time
-	implementation (group: 'joda-time', name: 'joda-time', version: '2.10.4')
+	implementation (group: 'joda-time', name: 'joda-time', version: '2.10.5')
 
 	// H2 Database
 	implementation (group: 'com.h2database', name: 'h2', version: '1.4.200')
