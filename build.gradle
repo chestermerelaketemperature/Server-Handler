@@ -60,7 +60,7 @@ dependencies {
 	implementation (group: 'com.h2database', name: 'h2', version: '1.4.200')
 
 	// JUnit
-	testImplementation (group: 'junit', name: 'junit', version: '4.12')
+	testImplementation (group: 'junit', name: 'junit', version: '4.13')
 
 	// Configurations and Apache is annoying.
 	compile 'org.apache.commons:commons-configuration2:2.6'
