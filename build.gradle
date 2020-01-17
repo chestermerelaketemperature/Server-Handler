@@ -38,7 +38,7 @@ repositories {
 dependencies {
 
 	// Spring
-	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.2.RELEASE')
+	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.3.RELEASE')
 
 	// Reflections
 	implementation (group: 'org.reflections', name: 'reflections', version: '0.9.12')
