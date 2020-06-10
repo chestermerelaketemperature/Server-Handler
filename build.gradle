@@ -33,6 +33,15 @@ bootJar {
 repositories {
 	mavenCentral()
 	jcenter()
+
+	// Japson
+	maven {
+		url 'https://maven.pkg.github.com/Sitrica/Japson/'
+		credentials {
+            username = "Sitrica"
+            password = System.getenv("GITHUB_PACKAGES_KEY")
+        }
+	}
 }
 
 dependencies {
@@ -52,6 +61,9 @@ dependencies {
 	// Google Flogger
 	shade (group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.5.1')
 	shade (group: 'com.google.flogger', name: 'flogger', version: '0.5.1')
+
+	// Japson
+	shade (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')
 
 	// Joda-Time
 	implementation (group: 'joda-time', name: 'joda-time', version: '2.10.6')
