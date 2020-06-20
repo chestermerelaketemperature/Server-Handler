@@ -57,6 +57,26 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.github.weatherapicom/weatherapi-JAVA/CodeGen-JAVA-SNAPSHOT/786e73c839ad9114873eb17ddc91edb016955b59/weatherapi-JAVA-CodeGen-JAVA-SNAPSHOT-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.github.weatherapicom/weatherapi-JAVA/CodeGen-JAVA-SNAPSHOT/c8d94d5e6a83047fc2bd8d49eb268cd12554b2af/weatherapi-JAVA-CodeGen-JAVA-SNAPSHOT.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpasyncclient/4.1.4/1e5c5d894e85baa50550e9cb8d8ddc112fbea178/httpasyncclient-4.1.4-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpasyncclient/4.1.4/f3a3240681faae3fa46b573a4c7e50cec9db0d86/httpasyncclient-4.1.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.10/a095460f92287c107a5896dd6a2e533af563ef2c/httpmime-4.5.10-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.10/3513ca10d24d7aa962741c90e914fec650f0848c/httpmime-4.5.10.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.10/b88c634257720718f33caebc6fc6ec52e4cce190/httpclient-4.5.10-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.10/7ca2e4276f4ef95e4db725a8cd4a1d1e7585b9e5/httpclient-4.5.10.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.14/674f0614376ac38259b01bcc67189ef240234569/commons-codec-1.14-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.14/3cb1181b2141a7e752f5bdc998b7ef1849f726cf/commons-codec-1.14.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
@@ -182,6 +202,51 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.6/a8f244f4b2c9eaf25592ac96eb62e5a82ab40f95/okhttp-3.14.6-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.6/3922cd2edd3df7616aa85a170398e5010989f212/okhttp-3.14.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.10.2/11316cb0a5c2273ec88268ed1aa4b243394be1a2/jackson-datatype-jdk8-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.10.2/dca8c8ab85eaabefe021e2f1ac777f3a6b16a3cb/jackson-datatype-jdk8-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.10.2/8f82a17a37861c146dcf217931b0381925c1e09d/jackson-datatype-jsr310-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.10.2/8d95d3f2b20c7d2f598b6d5e7f4e2d688ac1bc78/jackson-datatype-jsr310-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.10.2/7fee23c01ec1e3897933da9a660f77849cbb2dea/jackson-module-parameter-names-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.10.2/d380777656dfdd253d9cf0956d61d98dce02c740/jackson-module-parameter-names-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.2/f65a9cc329f6a29eff8812536153a89a7562dbc/jackson-databind-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.2/528de95f198afafbcfb0c09d2e43b6e0ea663ec/jackson-databind-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/387baaa5f80e83cd14b49fdb8f7aeb6989d6f35a/jackson-core-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/73d4322a6bda684f676a2b5fe918361c4e5c7cca/jackson-core-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/4ecdff8070b3ad24162be3441e58f7d244bbd065/jackson-annotations-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/3a13b6105946541b8d4181a0506355b5fae63260/jackson-annotations-2.10.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore-nio/4.4.13/449ca4fabab2bd78e230f89adb790946e999125/httpcore-nio-4.4.13-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore-nio/4.4.13/3f897ace4d7f10f0ea6a58f524a3b105dd483653/httpcore-nio-4.4.13.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.13/d6e6365dac44108fb2cc0684daea0d40bc6609f5/httpcore-4.4.13-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.13/853b96d3afbb7bf8cc303fe27ee96836a10c1834/httpcore-4.4.13.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.2.4.RELEASE/76c1a422f9099d1f661a7d45188e1105fe7d288b/spring-boot-autoconfigure-2.2.4.RELEASE-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.2.4.RELEASE/36d2bb5d0eeb616eb84f754c4076b30e6b61614c/spring-boot-autoconfigure-2.2.4.RELEASE.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
@@ -227,26 +292,6 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.10.2/11316cb0a5c2273ec88268ed1aa4b243394be1a2/jackson-datatype-jdk8-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.10.2/dca8c8ab85eaabefe021e2f1ac777f3a6b16a3cb/jackson-datatype-jdk8-2.10.2.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.10.2/8f82a17a37861c146dcf217931b0381925c1e09d/jackson-datatype-jsr310-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.10.2/8d95d3f2b20c7d2f598b6d5e7f4e2d688ac1bc78/jackson-datatype-jsr310-2.10.2.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.10.2/7fee23c01ec1e3897933da9a660f77849cbb2dea/jackson-module-parameter-names-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.10.2/d380777656dfdd253d9cf0956d61d98dce02c740/jackson-module-parameter-names-2.10.2.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.2/f65a9cc329f6a29eff8812536153a89a7562dbc/jackson-databind-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.2/528de95f198afafbcfb0c09d2e43b6e0ea663ec/jackson-databind-2.10.2.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/9.0.30/938fb9a3f1c72873f5d43abef7e1d69e593cb7a0/tomcat-embed-websocket-9.0.30-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/9.0.30/33157f6bc5bfd03380ebb5ac476db0600a04168d/tomcat-embed-websocket-9.0.30.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
@@ -258,6 +303,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/9.0.30/44e03a34483dde0bc2e41db049f81cbe8756088e/tomcat-embed-el-9.0.30-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/9.0.30/406e0c7cc45204c0f81853d73e8cfedfa4e00945/tomcat-embed-el-9.0.30.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/331ecaeba2fd87c06a0766e8ebe718e1e294f27d/okio-1.17.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/78c7820b205002da4d2d137f6f312bd64b3d6049/okio-1.17.2.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -278,16 +328,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.2.3.RELEASE/6be9227d3fbb5131762869937c4b924c82676ded/spring-jcl-5.2.3.RELEASE-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.2.3.RELEASE/fcba3ae00724ee18f37aa49ac887a5fd4ad77502/spring-jcl-5.2.3.RELEASE.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/4ecdff8070b3ad24162be3441e58f7d244bbd065/jackson-annotations-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/3a13b6105946541b8d4181a0506355b5fae63260/jackson-annotations-2.10.2.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/387baaa5f80e83cd14b49fdb8f7aeb6989d6f35a/jackson-core-2.10.2-sources.jar" kind="lib" path="C:/Users/Sean Grover/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/73d4322a6bda684f676a2b5fe918361c4e5c7cca/jackson-core-2.10.2.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>

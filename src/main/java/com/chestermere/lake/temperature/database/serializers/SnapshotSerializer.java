@@ -22,6 +22,7 @@ public class SnapshotSerializer implements Serializer<Snapshot> {
 		json.addProperty("water", snapshot.getWaterTemperature());
 		json.addProperty("air", snapshot.getAirTemperature());
 		json.addProperty("manual", snapshot.isManual());
+		json.addProperty("wind", snapshot.getWindKph());
 		json.addProperty("id", snapshot.getID());
 		return json;
 	}
@@ -44,7 +45,10 @@ public class SnapshotSerializer implements Serializer<Snapshot> {
 		JsonElement id = object.get("id");
 		if (id == null || id.isJsonNull())
 			return null;
-		return new Snapshot(instant, manual.getAsBoolean(), water.getAsDouble(), air.getAsDouble(), id.getAsLong());
+		JsonElement wind = object.get("wind");
+		if (wind == null || wind.isJsonNull())
+			return null;
+		return new Snapshot(instant, manual.getAsBoolean(), water.getAsDouble(), air.getAsDouble(), wind.getAsDouble(), id.getAsLong());
 	}
 
 }

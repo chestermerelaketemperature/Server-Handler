@@ -11,6 +11,7 @@ import com.chestermere.lake.temperature.database.Database;
 import com.chestermere.lake.temperature.database.H2Database;
 import com.chestermere.lake.temperature.objects.DaySnapshot;
 import com.chestermere.lake.temperature.objects.Snapshot;
+import com.weatherapi.api.models.Current;
 
 public class SnapshotManager {
 
@@ -29,9 +30,9 @@ public class SnapshotManager {
 		}
 	}
 
-	public void addSnapshot(boolean manual, double water, double air) {
+	public void addSnapshot(boolean manual, double water, Current weather) {
 		long id = counter.incrementAndGet();
-		Snapshot snapshot = new Snapshot(Instant.now(), manual, water, air, id);
+		Snapshot snapshot = new Snapshot(Instant.now(), manual, water, weather.getTempC(), weather.getWindKph(), id);
 		database.put(id + "", snapshot);
 		database.put("last", snapshot);
 		last = snapshot;

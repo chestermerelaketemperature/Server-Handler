@@ -42,6 +42,10 @@ repositories {
             password = System.getenv("GITHUB_PACKAGES_KEY")
         }
 	}
+
+	maven {
+		url 'https://jitpack.io'
+	}
 }
 
 dependencies {
@@ -61,6 +65,9 @@ dependencies {
 	// Google Flogger
 	shade (group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.5.1')
 	shade (group: 'com.google.flogger', name: 'flogger', version: '0.5.1')
+
+	// Weather API (weatherapi.com)
+	shade (group: 'com.github.weatherapicom', name: 'weatherapi-JAVA', version: 'CodeGen-JAVA-SNAPSHOT')
 
 	// Japson
 	shade (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')

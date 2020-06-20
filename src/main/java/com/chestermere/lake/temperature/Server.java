@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Nullable;
 
@@ -18,14 +20,22 @@ import com.google.common.flogger.FluentLogger;
 import com.sitrica.japson.gson.JsonObject;
 import com.sitrica.japson.server.JapsonServer;
 import com.sitrica.japson.shared.Handler;
+import com.weatherapi.api.WeatherAPIClient;
+import com.weatherapi.api.controllers.APIsController;
+import com.weatherapi.api.http.client.APICallBack;
+import com.weatherapi.api.http.client.HttpContext;
+import com.weatherapi.api.models.Current;
+import com.weatherapi.api.models.CurrentJsonResponse;
 
 public class Server {
 
 	private static final FluentLogger logger = FluentLogger.forEnclosingClass();
+	private final APIsController weatherApi;
 	private final SnapshotManager snapshots;
 	private final Encryption encryption;
 	private Configuration configuration;
 	private JapsonServer japson;
+	private Current current;
 
 	Server() {
 		Configurations configurations = new Configurations();
@@ -35,6 +45,19 @@ public class Server {
 		catch (ConfigurationException exception) {
 			exception.printStackTrace();
 		}
+		this.weatherApi = new WeatherAPIClient(configuration.getString("weather-api-key")).getAPIs();
+		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
+			weatherApi.getRealtimeWeatherAsync("Chestermere", null, new APICallBack<CurrentJsonResponse>() {
+				@Override
+				public void onSuccess(HttpContext context, CurrentJsonResponse response) {
+					current = response.getCurrent();
+				}
+				@Override
+				public void onFailure(HttpContext context, Throwable error) {
+					error.printStackTrace();
+				}
+			});
+		}, 0, 15, TimeUnit.MINUTES);
 		this.encryption = new Encryption(this);
 		this.snapshots = new SnapshotManager(this);
 		try {
@@ -45,9 +68,7 @@ public class Server {
 					if (!object.has("temperature"))
 						return null;
 					float temperature = object.get("temperature").getAsFloat();
-					//TODO handle air temperature into SnapshotManager.
-					// Use a public REST API for now.
-					snapshots.addSnapshot(false, temperature, 0);
+					snapshots.addSnapshot(false, temperature, current);
 					return null;
 				}
 			});

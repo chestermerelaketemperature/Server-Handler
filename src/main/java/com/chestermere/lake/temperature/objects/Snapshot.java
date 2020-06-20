@@ -13,22 +13,24 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
  */
 public class Snapshot {
 
-	private final double water, air;
+	// Wind = kph, water = f, air = c
+	private final double water, air, wind;
 	@JsonSerialize(using = InstantJackson.class)
 	private final Instant instant;
 	private final boolean manual;
 	private final long id;
 
-	public Snapshot(Instant instant, boolean manual, double water, double air, long id) {
+	public Snapshot(Instant instant, boolean manual, double water, double air, double wind, long id) {
 		this.instant = instant;
 		this.manual = manual;
 		this.water = water;
+		this.wind = wind;
 		this.air = air;
 		this.id = id;
 	}
 
-	public Snapshot(boolean manual, int water, int air, long id) {
-		this(Instant.now(), manual, water, air, id);
+	public Snapshot(boolean manual, int water, int air, double wind, long id) {
+		this(Instant.now(), manual, water, air, wind, id);
 	}
 
 	public double getWaterTemperature() {
@@ -50,6 +52,10 @@ public class Snapshot {
 	@JsonIgnore
 	public Instant getCreation() {
 		return instant;
+	}
+
+	public double getWindKph() {
+		return wind;
 	}
 
 	public boolean isManual() {
