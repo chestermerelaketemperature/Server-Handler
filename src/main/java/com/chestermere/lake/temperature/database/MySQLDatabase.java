@@ -1,11 +1,16 @@
 package com.chestermere.lake.temperature.database;
 
-import com.google.gson.JsonSyntaxException;
-
 import java.lang.reflect.Type;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+
+import com.google.gson.JsonSyntaxException;
 
 public class MySQLDatabase<T> extends Database<T> {
 
@@ -13,17 +18,13 @@ public class MySQLDatabase<T> extends Database<T> {
 	private Connection connection;
 	private final Type type;
 
-	public MySQLDatabase(String host, String dbname, String tablename, String username, String password, Type type) throws SQLException {
-		this.type = type;
+	public MySQLDatabase(String host, String dbname, String tablename, String username, String password, Type type, Map<Type, Serializer<?>> serializers) throws SQLException {
+		super(serializers);
 		this.tablename = tablename;
+		this.type = type;
 		String url = "jdbc:mysql://" + host + "/" + dbname;
 		connection = DriverManager.getConnection(url, username, password);
-		if (connection == null)
-			return;
-		String tablequery = "CREATE TABLE IF NOT EXISTS %table (`id` CHAR(36) PRIMARY KEY, `data` TEXT);".replace("%table", tablename);
-		PreparedStatement statement = connection.prepareStatement(tablequery);
-		statement.executeUpdate();
-		statement.close();
+		initTable();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -42,8 +43,7 @@ public class MySQLDatabase<T> extends Database<T> {
 					e.printStackTrace();
 					return def;
 				}
-				if (result == null)
-					return def;
+				if (result==null)return def;
 			}
 			stmt.close();
 			return result;
@@ -114,6 +114,12 @@ public class MySQLDatabase<T> extends Database<T> {
 			e.printStackTrace();
 		}
 		return tempset;
+	}
+
+	private void initTable() throws SQLException {
+		String tablequery = "CREATE TABLE IF NOT EXISTS %table (`id` CHAR(36) PRIMARY KEY, `data` TEXT);".replace("%table", tablename);
+		PreparedStatement statement = connection.prepareStatement(tablequery);
+		statement.executeUpdate();
 	}
 
 }

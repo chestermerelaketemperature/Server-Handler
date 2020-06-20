@@ -1,5 +1,5 @@
 import org.apache.tools.ant.filters.ReplaceTokens
-
+/*
 buildscript {
 	repositories {
 		mavenCentral()
@@ -8,29 +8,31 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.4.RELEASE")
 	}
 }
+*/
 
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'java-library'
-apply plugin: 'eclipse'
+plugins {
+	id 'com.github.johnrengelman.shadow' version '5.2.0'
+	//id 'io.spring.dependency-management'
+	//id 'org.springframework.boot'
+	id 'application'
+	id 'eclipse'
+	id 'java'
+}
 
 sourceCompatibility = '1.8'
 group = 'com.chestermere.lake.temperature'
+mainClassName = group + '.Application'
 version = '0.0.1-SNAPSHOT'
 
-configurations {
-	shade
-	compile.extendsFrom shade
-}
-
-bootJar {
+/*bootJar {
+	dependsOn(shadowJar)
 	mainClassName = 'com.chestermere.lake.temperature.Application'
 	baseName = 'Server-Handler'
 	version =  version
 	manifest {
 		attributes 'Start-Class': mainClassName
 	}
-}
+}*/
 
 repositories {
 	mavenCentral()
@@ -53,44 +55,44 @@ repositories {
 dependencies {
 
 	// Spring
-	shade (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE')
+	shadow (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE')
 
 	// Reflections
-	shade (group: 'org.reflections', name: 'reflections', version: '0.9.12')
+	shadow (group: 'org.reflections', name: 'reflections', version: '0.9.12')
 
 	// Google Guava
-	shade (group: 'com.google.guava', name: 'guava', version: '29.0-jre')
+	shadow (group: 'com.google.guava', name: 'guava', version: '29.0-jre')
 
 	// Google Gson
-	shade (group: 'com.google.code.gson', name: 'gson', version: '2.8.6')
+	shadow (group: 'com.google.code.gson', name: 'gson', version: '2.8.6')
 
 	// Google Flogger
-	shade (group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.5.1')
-	shade (group: 'com.google.flogger', name: 'flogger', version: '0.5.1')
+	shadow (group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.5.1')
+	shadow (group: 'com.google.flogger', name: 'flogger', version: '0.5.1')
 
 	// Weather API (weatherapi.com)
-	shade (group: 'com.github.weatherapicom', name: 'weatherapi-JAVA', version: 'CodeGen-JAVA-SNAPSHOT')
+	shadow (group: 'com.github.weatherapicom', name: 'weatherapi-JAVA', version: 'CodeGen-JAVA-SNAPSHOT')
 
 	// Japson
-	shade (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')
+	shadow (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')
 
 	// Joda-Time
-	shade (group: 'joda-time', name: 'joda-time', version: '2.10.6')
+	shadow (group: 'joda-time', name: 'joda-time', version: '2.10.6')
 
 	// H2 Database
-	shade (group: 'com.h2database', name: 'h2', version: '1.4.200')
+	shadow (group: 'com.h2database', name: 'h2', version: '1.4.200')
 
 	// JUnit
 	testImplementation (group: 'junit', name: 'junit', version: '4.13')
 
 	// Configurations and Apache is annoying.
-	shade 'org.apache.commons:commons-configuration2:2.7'
-	shade 'org.apache.commons:commons-lang3:3.10'
-	shade 'commons-logging:commons-logging:1.2'
-	shade 'commons-beanutils:commons-beanutils:1.9.4'
-	shade 'commons-codec:commons-codec:1.14'
-	shade 'commons-jxpath:commons-jxpath:1.3'
-	shade 'org.apache.commons:commons-jexl:2.1.1'
+	shadow 'org.apache.commons:commons-configuration2:2.7'
+	shadow 'org.apache.commons:commons-lang3:3.10'
+	shadow 'commons-logging:commons-logging:1.2'
+	shadow 'commons-beanutils:commons-beanutils:1.9.4'
+	shadow 'commons-codec:commons-codec:1.14'
+	shadow 'commons-jxpath:commons-jxpath:1.3'
+	shadow 'org.apache.commons:commons-jexl:2.1.1'
 
 	// Spring tests
 	testCompile (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.0.RELEASE')
@@ -104,10 +106,9 @@ processResources {
 	}
 }
 
-jar {
-	configurations.shade.each {dep ->
-		from (project.zipTree(dep)) {
-			exclude 'META-INF', 'META-INF/**'
-		}
-	}
+shadowJar {
+	configurations = [project.configurations.shadow]
+	archiveVersion = version
+	baseName = project.name
+	classifier = ''
 }

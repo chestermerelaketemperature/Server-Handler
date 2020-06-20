@@ -3,7 +3,9 @@ package com.chestermere.lake.temperature.managers;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.chestermere.lake.temperature.Server;
@@ -21,7 +23,7 @@ public class SnapshotManager {
 
 	public SnapshotManager(Server instance) {
 		try {
-			database = new H2Database<Snapshot>(instance, "snapshots", Snapshot.class);
+			database = new H2Database<Snapshot>(instance, "snapshots", Snapshot.class, new HashMap<>());
 			last = database.get("last");
 			if (last != null)
 				counter.set(last.getID());
@@ -36,6 +38,7 @@ public class SnapshotManager {
 		database.put(id + "", snapshot);
 		database.put("last", snapshot);
 		last = snapshot;
+		Optional.ofNullable(database.get("last")).ifPresent(temp -> System.out.println(temp.getAirTemperature()));
 	}
 
 	public DaySnapshot getToday() {

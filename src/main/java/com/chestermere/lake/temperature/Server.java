@@ -67,11 +67,14 @@ public class Server {
 				public String handle(InetAddress address, int port, JsonObject object) {
 					if (!object.has("temperature"))
 						return null;
+					if (current == null) // Usally because the server just started, skip this one and get the next.
+						return null;
 					float temperature = object.get("temperature").getAsFloat();
 					snapshots.addSnapshot(false, temperature, current);
 					return null;
 				}
 			});
+			japson.enableDebug();
 		} catch (UnknownHostException | SocketException e) {
 			e.printStackTrace();
 		}
