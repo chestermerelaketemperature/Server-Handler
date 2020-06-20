@@ -1,3 +1,5 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 buildscript {
 	repositories {
 		mavenCentral()
@@ -51,16 +53,16 @@ repositories {
 dependencies {
 
 	// Spring
-	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE')
+	shade (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.0.RELEASE')
 
 	// Reflections
-	implementation (group: 'org.reflections', name: 'reflections', version: '0.9.12')
+	shade (group: 'org.reflections', name: 'reflections', version: '0.9.12')
 
 	// Google Guava
-	implementation (group: 'com.google.guava', name: 'guava', version: '29.0-jre')
+	shade (group: 'com.google.guava', name: 'guava', version: '29.0-jre')
 
 	// Google Gson
-	implementation (group: 'com.google.code.gson', name: 'gson', version: '2.8.6')
+	shade (group: 'com.google.code.gson', name: 'gson', version: '2.8.6')
 
 	// Google Flogger
 	shade (group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.5.1')
@@ -73,26 +75,33 @@ dependencies {
 	shade (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')
 
 	// Joda-Time
-	implementation (group: 'joda-time', name: 'joda-time', version: '2.10.6')
+	shade (group: 'joda-time', name: 'joda-time', version: '2.10.6')
 
 	// H2 Database
-	implementation (group: 'com.h2database', name: 'h2', version: '1.4.200')
+	shade (group: 'com.h2database', name: 'h2', version: '1.4.200')
 
 	// JUnit
 	testImplementation (group: 'junit', name: 'junit', version: '4.13')
 
 	// Configurations and Apache is annoying.
-	compile 'org.apache.commons:commons-configuration2:2.7'
-	compile 'org.apache.commons:commons-lang3:3.10'
-	compile 'commons-logging:commons-logging:1.2'
-	compile 'commons-beanutils:commons-beanutils:1.9.4'
-	compile 'commons-codec:commons-codec:1.14'
-	compile 'commons-jxpath:commons-jxpath:1.3'
-	compile 'org.apache.commons:commons-jexl:2.1.1'
+	shade 'org.apache.commons:commons-configuration2:2.7'
+	shade 'org.apache.commons:commons-lang3:3.10'
+	shade 'commons-logging:commons-logging:1.2'
+	shade 'commons-beanutils:commons-beanutils:1.9.4'
+	shade 'commons-codec:commons-codec:1.14'
+	shade 'commons-jxpath:commons-jxpath:1.3'
+	shade 'org.apache.commons:commons-jexl:2.1.1'
 
 	// Spring tests
 	testCompile (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.0.RELEASE')
 
+}
+
+processResources {
+	filter ReplaceTokens, tokens: ["version": version]
+	from (sourceSets.main.resources.srcDirs) {
+		include '*.properties'
+	}
 }
 
 jar {
