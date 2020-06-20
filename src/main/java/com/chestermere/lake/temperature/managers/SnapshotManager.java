@@ -32,7 +32,7 @@ public class SnapshotManager {
 
 	public void addSnapshot(boolean manual, double water, Current weather) {
 		long id = counter.incrementAndGet();
-		Snapshot snapshot = new Snapshot(Instant.now(), manual, water, weather.getTempC(), weather.getWindKph(), id);
+		Snapshot snapshot = new Snapshot(Instant.now(), manual, water, weather.getTempC(), weather.getWindKph(), weather.getGustKph(), id);
 		database.put(id + "", snapshot);
 		database.put("last", snapshot);
 		last = snapshot;

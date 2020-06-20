@@ -21,6 +21,7 @@ public class SnapshotSerializer implements Serializer<Snapshot> {
 		json.add("instant", context.serialize(snapshot.getCreation(), Instant.class));
 		json.addProperty("water", snapshot.getWaterTemperature());
 		json.addProperty("air", snapshot.getAirTemperature());
+		json.addProperty("gust", snapshot.getWindGustKph());
 		json.addProperty("manual", snapshot.isManual());
 		json.addProperty("wind", snapshot.getWindKph());
 		json.addProperty("id", snapshot.getID());
@@ -48,7 +49,10 @@ public class SnapshotSerializer implements Serializer<Snapshot> {
 		JsonElement wind = object.get("wind");
 		if (wind == null || wind.isJsonNull())
 			return null;
-		return new Snapshot(instant, manual.getAsBoolean(), water.getAsDouble(), air.getAsDouble(), wind.getAsDouble(), id.getAsLong());
+		JsonElement gust = object.get("gust");
+		if (gust == null || gust.isJsonNull())
+			return null;
+		return new Snapshot(instant, manual.getAsBoolean(), water.getAsDouble(), air.getAsDouble(), wind.getAsDouble(), gust.getAsDouble(), id.getAsLong());
 	}
 
 }

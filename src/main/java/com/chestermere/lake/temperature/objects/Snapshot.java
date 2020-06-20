@@ -14,14 +14,15 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 public class Snapshot {
 
 	// Wind = kph, water = f, air = c
-	private final double water, air, wind;
+	private final double water, air, wind, windGust;
 	@JsonSerialize(using = InstantJackson.class)
 	private final Instant instant;
 	private final boolean manual;
 	private final long id;
 
-	public Snapshot(Instant instant, boolean manual, double water, double air, double wind, long id) {
+	public Snapshot(Instant instant, boolean manual, double water, double air, double wind, double windGust, long id) {
 		this.instant = instant;
+		this.windGust = windGust;
 		this.manual = manual;
 		this.water = water;
 		this.wind = wind;
@@ -29,8 +30,8 @@ public class Snapshot {
 		this.id = id;
 	}
 
-	public Snapshot(boolean manual, int water, int air, double wind, long id) {
-		this(Instant.now(), manual, water, air, wind, id);
+	public Snapshot(boolean manual, int water, int air, double wind, double windGust, long id) {
+		this(Instant.now(), manual, water, air, wind, windGust, id);
 	}
 
 	public double getWaterTemperature() {
@@ -52,6 +53,10 @@ public class Snapshot {
 	@JsonIgnore
 	public Instant getCreation() {
 		return instant;
+	}
+
+	public double getWindGustKph() {
+		return windGust;
 	}
 
 	public double getWindKph() {
