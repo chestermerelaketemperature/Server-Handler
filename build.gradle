@@ -87,7 +87,7 @@ dependencies {
 
 	// Configurations and Apache is annoying.
 	shadow 'org.apache.commons:commons-configuration2:2.7'
-	shadow 'org.apache.commons:commons-lang3:3.10'
+	shadow 'org.apache.commons:commons-lang3:3.11'
 	shadow 'commons-logging:commons-logging:1.2'
 	shadow 'commons-beanutils:commons-beanutils:1.9.4'
 	shadow 'commons-codec:commons-codec:1.14'
