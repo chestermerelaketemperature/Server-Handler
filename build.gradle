@@ -90,7 +90,7 @@ dependencies {
 	shadow 'org.apache.commons:commons-lang3:3.10'
 	shadow 'commons-logging:commons-logging:1.2'
 	shadow 'commons-beanutils:commons-beanutils:1.9.4'
-	shadow 'commons-codec:commons-codec:1.14'
+	shadow 'commons-codec:commons-codec:1.15'
 	shadow 'commons-jxpath:commons-jxpath:1.3'
 	shadow 'org.apache.commons:commons-jexl:2.1.1'
 
