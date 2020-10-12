@@ -83,7 +83,7 @@ dependencies {
 	shadow (group: 'com.h2database', name: 'h2', version: '1.4.200')
 
 	// JUnit
-	testImplementation (group: 'junit', name: 'junit', version: '4.13')
+	testImplementation (group: 'junit', name: 'junit', version: '4.13.1')
 
 	// Configurations and Apache is annoying.
 	shadow 'org.apache.commons:commons-configuration2:2.7'
