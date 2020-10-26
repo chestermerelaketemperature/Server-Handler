@@ -77,7 +77,7 @@ dependencies {
 	shadow (group: 'com.sitrica', name: 'japson-beta', version: '1.0.6.7-SNAPSHOT')
 
 	// Joda-Time
-	shadow (group: 'joda-time', name: 'joda-time', version: '2.10.6')
+	shadow (group: 'joda-time', name: 'joda-time', version: '2.10.8')
 
 	// H2 Database
 	shadow (group: 'com.h2database', name: 'h2', version: '1.4.200')
